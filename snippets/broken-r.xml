@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	
+  <remote name="broken-r"
+          fetch="https://github.com/BrokenOs-Resurrected/"
+          revision="o8.1" />
+
+  <project path="bionic" name="bionic" remote="broken-r" />
+  <project path="build/soong" name="build_soong" remote="broken-r" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+</project>
+  <project path="external/google" remote="broken-r" name="external_google" />
+  <project path="frameworks/base" remote="broken-r" name="frameworks_base" />
+  <project path="packages/apps/BrokenOTA" remote="broken-r" name="packages_apps_BrokenOTA" >
+    <copyfile src="ota_conf" dest="ota_conf" />
+  </project>
+  <project path="packages/apps/BrokenWalls" remote="broken-r" name="packages_apps_BrokenWalls" />
+  <project path="packages/apps/LockClock" remote="broken-r" name="packages_apps_LockClock" />
+  <project path="packages/apps/Settings" remote="broken-r" name="packages_apps_Settings" />
+  <project path="packages/apps/BrokenPieces" remote="broken-r" name="packages_apps_BrokenPieces" />
+  <project path="platform_manifest" remote="broken-r" name="platform_manifest" />
+  <project path="vendor/broken" remote="broken-r" name="vendor_broken"  >
+	<copyfile src="tools/build-broken.sh" dest="build-broken.sh" />
+  </project>
+          
+</manifest>
