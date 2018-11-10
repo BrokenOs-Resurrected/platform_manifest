@@ -1,4 +1,4 @@
-To initialize your local repository using the AOSP/CAF based DysfunctionalROMs source, use this command:
+[b]To initialize your local repository using the AOSP/CAF based DysfunctionalROMs source, use this command:[/b]
 
 repo init -u git://github.com/DysfunctionalROMs/platform_manifest.git -b o8.0
 
