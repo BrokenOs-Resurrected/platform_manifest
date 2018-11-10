@@ -1,24 +1,27 @@
-[b]To initialize your local repository using the AOSP/CAF based DysfunctionalROMs source, use this command:[/b]
+<b><center>Disclaimer: This Rom is based off the great work that the BrokenOS Team has done, I have just brought it up to date for others to enjoy.</center></b>
 
-repo init -u git://github.com/DysfunctionalROMs/platform_manifest.git -b o8.0
 
-Sync up with this command:
+<b>To initialize your local repository using the AOSP/CAF based BrokenOs-Resurrected source, use this command:</b>
+
+repo init -u git://github.com/BrokenOs-Resurrected/platform_manifest.git -b o8.1
+
+<b>Sync up with this command:</b>
 
 repo sync -f -jX (-f being for force and replace the X in -jX with the number of cpus/threads your box contains (WARNING: Going too high can severely drag performance)
 
-Initiate the build with:
+<b>Initiate the build with:</b>
 
 . build/envsetup.sh
 
-Prepare your device with:
+<b>Prepare your device with:</b>
 
 lunch (pick your devices number from the list)
 
-Then fire it off with:
+<b>Then fire it off with:</b>
 
 time make broken -jX (x being the amount of cores/threads your build box contains...Adjust accordingly, but going too high for your box can cause complications..Be warned)
 
-Alternatively you can use our custom build script that will handle everything for you when building official devices by using the format:
+<b><u>Alternatively you can use our custom build script that will handle everything for you when building official devices by using the format: (Thank you to DysfunctionalROMs for this script)</b></u>
 
 ./build-broken.sh (flags) (device)
 
